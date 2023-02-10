@@ -1,68 +1,129 @@
 <!DOCTYPE html>
-<html>
-      
+<html lang="en">
 <head>
-    <title>
-        How to create drag and drop
-        features for images reorder
-        using HTML CSS and jQueryUI?
-    </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="beauty.css">
-
-      
-    <link href = 
-"https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-            rel = "stylesheet">
-      
-    <script src = 
-"https://code.jquery.com/jquery-1.10.2.js">
-    </script>
-      
-    <script src = 
-"https://code.jquery.com/ui/1.10.4/jquery-ui.js">
-    </script>
-   
 </head>
-      
 <body>
-    <h1 style="color:green">Image slider with a drag and drop option to change the position of the sequence of the image</h1>
-      
-      
-    <div class="height"></div><br>
-      
-    <div id = "imageListId">
-        <div id="imageNo1" class = "listitemClass">
-            <img src="images/images1.jpg" alt="">
-        </div>
-          
-        <div id="imageNo2" class = "listitemClass">
-            <img src="images/images2.png" alt="">
-        </div>
-  
-        <div id="imageNo3" class = "listitemClass">
-            <img src="images/images3.png" alt="">
-        </div>
-  
-        <div id="imageNo4" class = "listitemClass">
-            <img src="images/images4.png" alt="">
-        </div>
-  
-        <div id="imageNo5" class = "listitemClass">
-            <img src="images/images5.png" alt="">
-        </div>
-  
-        <div id="imageNo6" class = "listitemClass">
-            <img src="images/images6.jpg" alt="">
-        </div>
-    </div>
-          
-    <div id="outputDiv">
-        <b>Output of ID's of images : </b>
-        <input id="outputvalues" type="text" value="" />
-    </div>
-    
-    <script src="logic.js"></script>
+  <div class="container">
+    <h1 class="text-center my-3">Timesheet Calculator for a Week</h1>
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th>Day</th>
+          <th>Start Time</th>
+          <th>End Time</th>
+          <th>Break Duration (In Hours)</th>
+          <th>total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>
+            <input type="time" class="form-control" id="startTime1" value="08:00">
+          </td>
+          <td>
+            <input type="time" class="form-control" id="endTime1" value="17:00">
+          </td>
+          <td>
+            <input type="number" class="form-control" id="breakDuration1" value="2">
+          </td>
+          <td><input type="text" class="form-control total-hours" id="totalHours1" ></td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>
+            <input type="time" class="form-control" id="startTime2" value="08:00">
+          </td>
+          <td>
+            <input type="time" class="form-control" id="endTime2" value="18:00" >
+          </td>
+          <td>
+            <input type="number" class="form-control" id="breakDuration2" value="4">
+          </td>
+          <td><input type="text" class="form-control total-hours" id="totalHours2" ></td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>
+            <input type="time" class="form-control" id="startTime3" value="08:00">
+          </td>
+          <td>
+            <input type="time" class="form-control" id="endTime3" value="19:00">
+          </td>
+          <td>
+            <input type="number" class="form-control" id="breakDuration3" value="5">
+          </td>
+          <td><input type="text" class="form-control total-hours" id="totalHours3" ></td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>
+            <input type="time" class="form-control" id="startTime4" value="08:00">
+          </td>
+          <td>
+            <input type="time" class="form-control" id="endTime4" value="20:00">
+          </td>
+          <td>
+            <input type="number" class="form-control" id="breakDuration4" value="1">
+          </td>
+          <td><input type="text" class="form-control total-hours" id="totalHours4"></td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>
+            <input type="time" class="form-control" id="startTime5" value="08:00">
+          </td>
+          <td>
+            <input type="time" class="form-control" id="endTime5" value="21:00">
+          </td>
+          <td>
+            <input type="number" class="form-control" id="breakDuration5" value="2">
+          </td>
+          <td><input type="text" class="form-control total-hours" id="totalHours5"></td>
+        </tr>
+
+        <td>saturday</td>
+        <td>
+          <input type="time" class="form-control" id="startTime6" value="08:00">
+        </td>
+        <td>
+          <input type="time" class="form-control" id="endTime6" value="22:00">
+        </td>
+        <td>
+          <input type="number" class="form-control" id="breakDuration6" value="3">
+        </td>
+        <td><input type="text" class="form-control total-hours" id="totalHours6" ></td>
+      </tr>
+
+      <td>sunday</td>
+      <td>
+        <input type="time" class="form-control" id="startTime7" value="08:00">
+      </td>
+      <td>
+        <input type="time" class="form-control" id="endTime7" value="23:00">
+      </td>
+      <td>
+        <input type="number" class="form-control" id="breakDuration7" value="4">
+      </td>
+      <td><input type="text" class="form-control total-hours" id="totalHours7"></td>
+    </tr>
+       </tbody>
+    </table>
+
+    <button type="button" class="btn btn-primary" onclick="calculate()">Calculate</button>
+    <br/> <br/>
+
+    <h2>Total Hours:</h2>
+    <h3 id="result">click on calculate button to see total hours</h3>
+
+     <script src="logic.js">
+    </script>
+
 </body>
-  
 </html>
